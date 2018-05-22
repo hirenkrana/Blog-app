@@ -1,0 +1,10 @@
+<img class="carousel-image" ng-src="{{articleDetails.image}}"/>
+<h2>{{articleDetails.title}}</h2>
+<p>{{articleDetails.text}}</p>
+<textarea id="comment">{{comment}}</textarea>
+<a ui-sref="postComment" class="btn btn-info">Submit</a>
+<table>
+  <tr ng-repeat="comment in articleDetails.comments">
+    <td><textarea id={{comment.Id}} readonly="readonly">{{comment.text}}</textarea></td>
+  </tr>
+</table>

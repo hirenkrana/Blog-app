@@ -1,0 +1,21 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.4.0/ui-bootstrap-tpls.min.js"></script>
+<table class="table table-striped table-bordered table-condensed" style="width:50%">
+	<thead>
+	     <tr>
+	     	<th >Table Row Index</th>
+	     	<th >Employee Id</th>
+		 	<th >Employee Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="emp in allEmp">
+    		<td>{{ $index + 1 }}</td>
+    		<!-- use state parameter to show details -->
+	    	<td><a ui-sref="get-emp-details-param({id: emp.Id})">{{ emp.Id }}</a></td>
+	    	<!-- do not put href of <a> to # like <a herf="#" > if you navigate from controller
+	    	     using $state.go('stateName'). use <a herf="" >
+	    	  -->
+	    	<td><a ng-click="showEmpDetails(emp);">{{ emp.Name }} </a></td>
+	  	</tr>
+	</tbody>
+</table>

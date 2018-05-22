@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Sogeti's Blog post</title>
+	<link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>My AngularJS uiRouter App</h1>
+<hr>
+<div style="padding-bottom: 10px; border: 2px">
+<!-- for navigation we can use ui-sref="state-name" to activate state -->
+<a ui-sref="home" class="btn btn-info">Home</a>
+<a ui-sref="get-all-emp" class="btn btn-info">List All Employees</a>
+</div>
+<!-- for using ui.router ui have to we ui-view instate of ng-view -->
+<div ui-view class="well well-small"></div>
+<script data-main="js/main" src="js/lib/require/require.js"></script>
+</body>
+</html>
